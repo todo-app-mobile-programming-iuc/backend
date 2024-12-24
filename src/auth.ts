@@ -26,7 +26,6 @@ const authMiddleware = async (c: Context, next: Next) => {
     if (!payload.userId) throw new Error("Invalid token. no userId");
 
     c.userId = payload.userId;
-    c.facilityId = payload.facilityId;
 
     return next();
   } catch (error: any) {

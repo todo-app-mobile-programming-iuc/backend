@@ -27,7 +27,6 @@ app.post('/login', async (c) => {
 		const token = await sign(
 			{
                 userId: result[0].id,
-				facilityId: result[0].facility_id,
 			},
 			JWT_SECRET
 		);
@@ -39,8 +38,7 @@ app.post('/login', async (c) => {
 
 app.post('/register', async (c) => {
     try {
-        const { email, password, name, facility_id } = await c.req.json();
-
+        const { email, password, name } = await c.req.json();
         // Hash the password
         const hashedPassword = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(password));
         const hashedPasswordHex = Array.from(new Uint8Array(hashedPassword))
@@ -64,8 +62,7 @@ app.post('/register', async (c) => {
             .values({
                 email,
                 password: hashedPasswordHex,
-                name,
-                facility_id
+                name
             })
             .returning()
             .get();
