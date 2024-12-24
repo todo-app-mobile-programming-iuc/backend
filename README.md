@@ -1,5 +1,6 @@
 # Yetiştir Backend API Documentation
 
+## Url: https://backend.ahmetcanisik5458675.workers.dev
 ## Base URL
 The API is accessible at the root endpoint which returns a welcome message:
 - `GET /` - Returns "Hello from Yetiştir Backend!"
@@ -23,7 +24,6 @@ Authorization: Bearer <your_token>
     "email": "string",
     "password": "string",
     "name": "string",
-    "facility_id": "number"
   }
   ```
 - **Response:** (201 Created)
@@ -64,4 +64,4 @@ Authorization: Bearer <your_token>
 
 ## Notes
 - All endpoints are CORS-enabled
-- Token payload includes `userId` and `facilityId`
+- Token payload includes `userId`
