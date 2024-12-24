@@ -1,0 +1,34 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1733956410569,
+      "tag": "0000_redundant_gertrude_yorkes",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1733956461556,
+      "tag": "0001_neat_husk",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1733956929127,
+      "tag": "0002_acoustic_genesis",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1733959084261,
+      "tag": "0003_moaning_doorman",
+      "breakpoints": true
+    }
+  ]
+}
