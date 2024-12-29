@@ -18,6 +18,6 @@ app.get("/", (c) => c.text("Hello from Yetiştir Backend!"));
 
 app.route('/user', user);
 
-app.use('*', authMiddleware);
+// app.use('*', authMiddleware);
 
 export default app;
