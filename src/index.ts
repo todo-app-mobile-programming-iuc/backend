@@ -1,6 +1,7 @@
 import { Hono } from "hono";
 import { cors } from "hono/cors";
 import user from "./routes/user";
+import ai from "./routes/ai";
 import { authMiddleware } from "./auth";
 
 // will be removed to env
@@ -18,6 +19,8 @@ app.get("/", (c) => c.text("Hello from Yetiştir Backend!"));
 
 app.route('/user', user);
 
-// app.use('*', authMiddleware);
+app.use('*', authMiddleware);
+
+app.route('/ai', ai);
 
 export default app;

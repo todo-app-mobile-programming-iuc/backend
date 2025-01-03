@@ -12,3 +12,6 @@ binding = "DB"
 database_name = "sazan"
 database_id = "583d5de7-1a1f-4233-92f1-c2a368ae5a8e"
 migrations_dir = "drizzle/"
+
+[ai]
+binding = "AI" # available in your Worker code on `env.AI`
