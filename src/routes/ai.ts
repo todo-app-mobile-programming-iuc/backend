@@ -10,18 +10,9 @@ app.post("/", async (c) => {
   try {
     const { messages } = await c.req.json();
 
-    const stream = await c.env.AI.run(
-      "@cf/mistral/mistral-7b-instruct-v0.2-lora",
-      {
-        messages,
-        stream: true,
-      }
-    );
+    const response = await c.env.AI.run("@hf/mistral/mistral-7b-instruct-v0.2", { messages,max_tokens: 50 });
 
-    // @ts-ignore
-    return new Response(stream, {
-      headers: { "content-type": "text/event-stream" },
-    });
+    return Response.json(response);
   } catch (error: any) {
     return c.json(error.message, { status: 401 });
   }
